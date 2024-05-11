@@ -112,3 +112,20 @@ function Division(a,b){
 }
 
 Division(8,4)
+
+// Create a function that calculates simple interest
+// PRT/100
+// Principle ,roi ,time  / 1000
+// The whole point of operators is to perform the logical operations
+/**
+ * 
+
+Arithmetic Operators.
+Assignment Operators.
+Comparison Operators.
+String Operators.
+Logical Operators.
+Bitwise Operators.
+Ternary Operators.
+Type Operators.
+ */
