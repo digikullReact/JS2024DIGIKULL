@@ -52,6 +52,8 @@ function fizzBuzz(num){
     }
     else if(num%5==0){
         console.log("buzz")
+    }else{
+        console.log("No match")
     }
 
 }
