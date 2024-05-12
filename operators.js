@@ -5,7 +5,7 @@
 // // // Bit wise operators
 
 // // // Arithmetic operators
-// // // + ,- ,* ,/,%
+// // // + ,- ,* ,/,% (modulus )
 // // console.log(2+2);// 4 addition operator
 // // console.log(8-7); // 1 subtraction operator
 // // console.log(7*5); // 35 multiplication operator
@@ -61,21 +61,25 @@
 // AND &&  ,OR ||  ,NOT !
 
 // AND
-console.log(true && false);  // false
+// console.log(true && false);  // false
 
-console.log(true && true);  // true
+// console.log(true && true);  // true
 
-console.log(false && false);  // false
+// console.log(false && false);  // false
 
-console.log(false && true);  // false
+// console.log(false && true);  // false
 
 
-// OR 
-console.log(true || false) ;// true
-console.log(true || true) ;// true
-console.log(false || true) ;// true
-console.log(false || false) ;// false
+// // OR 
+// console.log(true || false) ;// true
+// console.log(true || true) ;// true
+// console.log(false || true) ;// true
+// console.log(false || false) ;// false
 
-// NOT !
-console.log(!false) ;// true
-console.log(!true) ;//false
+// // NOT !
+// console.log(!false) ;// true
+// console.log(!true) ;//false
+
+console.log((7>6)&& (6<5)) // output false
+console.log((8<9) || (9>6)) ; // output true
+console.log((7<5) && (7<9 )) ;// output ?false
