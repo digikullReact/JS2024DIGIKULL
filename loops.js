@@ -206,3 +206,46 @@ console.log(IsPrime(2));  // its an even prime number
 console.log(IsPrime(9))
 
 //Find all the prime numbers between 1 and 100
+
+function PrimeNumbers(m,n){
+    for (let i=m;i<=n; i++){
+     
+        if(IsPrime(i)){  // in the round brackets we should put something that returns boolean
+            console.log(i,"is a prime number");
+        }
+    }
+}
+PrimeNumbers(90,100)
+
+function PrimeNumbersWhile(m,n){
+    let i=m
+    while (i<=n){
+        if(IsPrime(i)){
+            console.log(i,"is a prime number");
+        }
+        i++
+    }
+}
+
+//PrimeNumbersWhile(20,100);
+
+///  Reverse a numbers   // 231 ----> 132
+
+
+function ReverseANumber(number){
+    let reverseNumber=0;
+    while(number>0){
+        let rightMostDigit=number%10;
+      
+        reverseNumber=(reverseNumber*10)+rightMostDigit
+        number=Math.floor(number/10);
+    }
+
+    return reverseNumber;
+
+}
+
+console.log(ReverseANumber(97));
+console.log(ReverseANumber(87));
+console.log(ReverseANumber(65));
+console.log(ReverseANumber(658767));
