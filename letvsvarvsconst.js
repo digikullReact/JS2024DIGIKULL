@@ -234,3 +234,18 @@ let h=89;
 //     console.log(h)  // h is not defined
 // }
 // foo(); // out put 
+// 
+/*
+redeclare  // let and const both cannot be redeclared but var van be redeclared
+let  v=9;
+let v=9;
+*/
+/*
+reassign  // let can be reassigned
+let c=9;
+c=89;
+*/
+/* const cannot be reassigned
+const v=9;
+v=90;
+*/
