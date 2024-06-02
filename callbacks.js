@@ -117,3 +117,17 @@ sumOfalloddnumbers(function(param){
 // },function(){
 
 // })
+
+
+function IsEven(num){
+    for(i=1;i<100;i++){
+        if(i%2==0)
+            num(i);
+    }
+}
+Iseven(function(p){
+    console.log(p);  // this will print value of i
+
+});
+
+ 
