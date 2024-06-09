@@ -102,7 +102,10 @@ function sumOfalloddnumbers(cb){
         }
     }
     cb(sum);
+    
 }
+// let sum=0;
+// sum=sum+i;
 
 sumOfalloddnumbers(function(param){
     console.log("from callback",param);
