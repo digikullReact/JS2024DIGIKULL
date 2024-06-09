@@ -5,19 +5,26 @@
 // selection by tag name
 // query selector 
 
-const element=document.getElementById("btn");
-const heading=document.getElementById("heading");
+// const element=document.getElementById("btn");
+// const heading=document.getElementById("heading");
+// const form =document.getElementById("form");
 
-element.addEventListener("click",function(){
-    console.log("button got clicked");
-    heading.style.color="gold"
-    // You can emit your own custom events
-    // const event=new Event("color");
-    // heading.dispatchEvent(event);
+// element.addEventListener("click",function(){
+//     console.log("button got clicked");
+//     heading.style.color="gold"
+//     // You can emit your own custom events
+//     // const event=new Event("color");
+//     // heading.dispatchEvent(event);
+//     form.style.display="block";
 
-})
+// })
 
-heading.addEventListener("color",function(){
-    alert("color changed");
-})
+// heading.addEventListener("color",function(){
+//     alert("color changed");
+// })
 
+
+//let data=prompt("how are you ??")
+//console.log(data);
+
+///alert("The page is working fine");
