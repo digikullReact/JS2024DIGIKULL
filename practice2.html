@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style="background-color: antiquewhite;height: 400px;width: 400px;" id="div">
+        <button id="a" class="btn">
+            A
+
+        </button>
+        <button id="b" class="btn">
+            B
+
+        </button>
+        <button id="b" class="btn">
+            
+            C
+
+        </button>
+        <button id="b" class="btn">
+            D
+
+        </button>
+        <button id="b" class="btn">
+            E
+
+        </button>
+        <button id="b" class="btn">
+            F
+
+        </button>
+        <button id="b" class="btn">
+            G
+
+        </button>
+        <button id="b" class="btn">
+            H
+
+        </button>
+
+    </div>
+    <script>
+        // [1,2,3,4]//length =4
+        let btnarray=document.getElementsByClassName("btn");
+        let div=document.getElementById("div");
+        //console.log(btn);
+        //btnarray.addEventListener() // it will never work
+        for (let i=0;i<btnarray.length;i++){
+            btnarray[i].addEventListener("click",function(event){
+                //console.log("clicked");
+                div.removeChild(event.target);
+            })
+
+        }
+        // let a=document.getElementById("a");
+        // let b=document.getElementById("b");
+        // let div=document.getElementById("div");
+        // a.addEventListener("click",function(){
+        //     div.removeChild(a);
+
+        // })
+        // b.addEventListener("click",function(){
+        //     div.removeChild(b);
+
+        // })
+
+        //
+        </script>
+    
+</body>
+</html>
