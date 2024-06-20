@@ -22,17 +22,27 @@ function deletElement(element){
     list.removeChild(r1);
 
 }
-btn.addEventListener("click",function(){
-    let existinghtml=list.innerHTML; // we are getting the existing html that is in the list
-    //list.innerHTML=existingtml+'<li class="list-group-item">'+input.value +'</li>'
-     // generate id dynamically
-      let id=makeid(8);
-     list.innerHTML=`${existinghtml}<li class="list-group-item">${input.value}
-      <button class="btn btn-danger"  onclick="deletElement(this)" id=${id}>
-     Delete
-     </button></li>`
+// btn.addEventListener("click",function(){
+//     let existinghtml=list.innerHTML; // we are getting the existing html that is in the list
+//     //list.innerHTML=existingtml+'<li class="list-group-item">'+input.value +'</li>'
+//      // generate id dynamically
+//       let id=makeid(8);
+//      list.innerHTML=`${existinghtml}<li class="list-group-item">${input.value}
+//       <button class="btn btn-danger"  onclick="deletElement(this)" id=${id}>
+//      Delete
+//      </button></li>`
 
-     list.style.overflow="scroll";
-     list.style.height="300px";
+//      list.style.overflow="scroll";
+//      list.style.height="300px";
+   
+// })
+
+btn.addEventListener("click",function(){
+    const lielement=document.createElement("li");
+    lielement.className="list-group-item"
+    lielement.innerText=input.value;
+    list.appendChild(lielement);
+    // create button element
+   
    
 })
