@@ -13,6 +13,31 @@ function makeid(length) {
     return result;
 }
 
+function AddToDoListener(){
+    const lielement=document.createElement("li");
+  
+    lielement.className="list-group-item"
+    lielement.innerText=input.value;
+
+    const btn=document.createElement("btn");
+    btn.className="btn btn-danger"
+    btn.addEventListener("click",deletElement2);
+    btn.innerText="Delete"
+
+    const ebtn=document.createElement("btn");
+    ebtn.className="btn btn-info"
+    ebtn.addEventListener("click",editelement);
+    ebtn.innerText="Edit"
+
+    lielement.appendChild(btn);
+    lielement.appendChild(ebtn);
+    list.appendChild(lielement);
+    // create button element
+   
+    input.value="";
+   
+}
+
 
 function deletElement(element){
     //console.log(element.id);
@@ -20,6 +45,51 @@ function deletElement(element){
     // get the parent element of this element
     var r1 = element_.closest("li");  
     list.removeChild(r1);
+
+}
+
+function deletElement2(event){
+    //console.log(element.id);
+    let element_=event.target;
+  
+    // get the parent element of this element
+    var r1 = element_.closest("li");  
+    list.removeChild(r1);
+
+}
+
+function editelement(event){
+  
+    //console.log(element.id);
+    let element_=event.target;
+  
+    // get the parent element of this element
+    var r1 = element_.closest("li"); 
+    let data=r1.innerText
+    let splitted=data.split("Delete")
+  
+    // string.split()
+
+    let editfunction=function(){
+       
+        // edit functionality will go here
+
+        let currentValue=input.value;
+        btn.removeEventListener("click",editfunction);
+        btn.addEventListener("click",AddToDoListener)
+        btn.innerText="Add Todo"
+
+        r1.innerText=currentValue;
+        input.value="";
+    }
+
+    input.value=splitted[0]
+    btn.removeEventListener("click",AddToDoListener);
+    btn.addEventListener("click",editfunction)
+    btn.innerText="Edit Todo"
+
+    btn.removeEventListener("click",AddToDoListener);
+    
 
 }
 // btn.addEventListener("click",function(){
@@ -37,12 +107,4 @@ function deletElement(element){
    
 // })
 
-btn.addEventListener("click",function(){
-    const lielement=document.createElement("li");
-    lielement.className="list-group-item"
-    lielement.innerText=input.value;
-    list.appendChild(lielement);
-    // create button element
-   
-   
-})
+btn.addEventListener("click",AddToDoListener)
