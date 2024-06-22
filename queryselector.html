@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div">
+
+    </div>
+    <button id="btn">
+        Click ME
+    </button>
+
+    <button id="btn2">
+        Generate Elements
+    </button>
+
+    <ul id="list">
+       
+    </ul>
+
+    
+    <script>
+//let btn=document.getElementById("btn");
+
+let btn=document.querySelector("#btn");
+let btn2=document.querySelector("#btn2");
+let list=document.getElementById("list");
+btn2.addEventListener("click",function(){
+    for(i=0;i<100;i++){
+        let li=document.createElement("li");
+        li.innerText=i+1;
+        list.appendChild(li);
+    }
+
+})
+        btn.addEventListener("click",function(){
+            for(let i=1;i<=100;i++){
+                if(i%2==0){
+                    let ele= document.querySelector(`ul li:nth-child(${i})`);
+           ele.style.color="green";
+                }
+
+            }
+      
+        //     let element=document.querySelector(".div");
+        // element.style.width="200px";
+        // element.style.height="300px";
+        // element.style.backgroundColor="gold"
+
+        // let lielements=document.querySelectorAll("li");  // returns collection of elements
+        // for (let i=0;i<lielements.length;i++){
+        //     lielements[i].innerText="HEllo"
+        // }
+        // //let lielements=document.querySelector("li"); // it always returns single element
+        // //lielements.innerText="HEllo"
+        })
+
+      
+      
+    </script>
+    
+</body>
+</html>
