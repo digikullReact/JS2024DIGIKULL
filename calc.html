@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="input">
+        <button >1</button>
+        <button >2</button>
+        <button >3</button>
+        <button >4</button>
+        <button >5</button>
+        <button >6</button>
+        <button >7</button>
+        <button >8</button>
+        <button >9</button>
+        <button >+</button>
+        <button >=</button>
+
+
+
+    </div>
+
+    <script>
+        let btnelement=document.getElementsByTagName("button");
+        let input=document.getElementById("input");
+        for (i=0;i<btnelement.length;i++){
+            btnelement[i].addEventListener("click",function(event){
+                if (event.target.innerText=="="){
+                    let output=eval(input.value);
+                    input.value=output;
+
+                    return
+                }
+                let existingvalue=input.value;
+                let currentValue=event.target.innerText
+               
+               let new_value =existingvalue+currentValue;
+                input.value=new_value
+
+
+            })
+
+        }
+
+    </script>
+    
+</body>
+</html>
