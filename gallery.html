@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #modal{
+            height: 700px;
+            width: 900px;
+          
+            background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+            position: absolute;
+            z-index: 1; /* Sit on top */
+            top: 0;
+            display: none;
+            
+            left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div style="cursor: pointer; position: relative;">
+
+        <img width="300px" height="300px" src="https://images.ctfassets.net/hrltx12pl8hq/01rJn4TormMsGQs1ZRIpzX/16a1cae2440420d0fd0a7a9a006f2dcb/Artboard_Copy_231.jpg?fit=fill&w=600&h=600" alt="" srcset="" class="image">
+
+    </div>
+
+    <div id="modal" >
+        <button id="hide" style="cursor: pointer;">X</button>
+
+    </div>
+
+    <script>
+      let images=document.getElementsByClassName("image")
+      let modal=document.getElementById("modal");
+      let hide=document.getElementById("hide");
+      hide.addEventListener("click",function(){
+        modal.style.display="none";
+      })
+
+      for(let i=0;i<images.length;i++){
+        images[i].addEventListener("click",function(event){
+            //console.log(event.target.src);
+            modal.style.display="block";
+
+            let img=document.createElement("img");
+            img.src=event.target.src
+            modal.appendChild(img);
+
+        })
+
+      }
+
+
+    </script>
+    
+</body>
+</html>
