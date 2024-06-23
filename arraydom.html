@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="search">
+    <ul id="list" style="list-style-type: none;">
+
+    </ul>
+    <script>
+
+        let arr=["shubham","Prerna","Ratnakar","jai","vachna"]
+       let list=document.getElementById("list");
+       let search=document.getElementById("search");
+       search.addEventListener("keydown",function(){
+        let value=search.value;
+
+        for (let i=0;i<arr.length;i++){
+            if (arr[i]==value){
+                list.innerHTML="";
+                let li=document.createElement("li");
+            li.innerText=arr[i];
+            list.appendChild(li);
+            }
+        
+
+        }
+
+        if (value==""){
+            for(let i=0;i<arr.length;i++){
+            let li=document.createElement("li");
+            li.innerText=arr[i];
+            list.appendChild(li);
+
+        }
+
+        }
+
+       })
+        for(let i=0;i<arr.length;i++){
+            let li=document.createElement("li");
+            li.innerText=arr[i];
+            list.appendChild(li);
+
+        }
+    </script>
+    
+</body>
+</html>
