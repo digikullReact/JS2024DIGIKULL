@@ -36,12 +36,12 @@
       let images=document.getElementsByClassName("image")
       let modal=document.getElementById("modal");
       let hide=document.getElementById("hide");
-      hide.addEventListener("click",function(){
+      hide.addEventListener("click",()=>{
         modal.style.display="none";
       })
 
       for(let i=0;i<images.length;i++){
-        images[i].addEventListener("click",function(event){
+        images[i].addEventListener("click",(event)=>{
             //console.log(event.target.src);
             modal.style.display="block";
 
