@@ -21,16 +21,16 @@
 
        // Constructor is a member function of a class, whose name is the same as the class name.
 
-       function Human(name){
-           this.name=name;  // this refers to the current object that is being created
-       }
-       Human.prototype.walk=function(){
-        console.log("walking")
-       }
+    //    function Human(name){
+    //        this.name=name;  // this refers to the current object that is being created
+    //    }
+    //    Human.prototype.walk=function(){
+    //     console.log("walking")
+    //    }
       
-       const h1=new Human("ravi");
-       const h2=new Human("shubham");
-       const h3=new Human("Prerna");
+    //    const h1=new Human("ravi");
+    //    const h2=new Human("shubham");
+    //    const h3=new Human("Prerna");
 
     //    h1.walk=function(){
     //     console.log("walking")
@@ -64,18 +64,187 @@
         console.log("Drive");
     }
 
-    let audi=new Vehicle("audi");
-    audi.luxury="Its a luxury car";
-    const toyota=new Vehicle("toyota");
-    const maruti =new Vehicle("maruti");
-   console.log(toyota);
+//     let audi=new Vehicle("audi");
+//     audi.luxury="Its a luxury car";
+//     const toyota=new Vehicle("toyota");
+//     const maruti =new Vehicle("maruti");
+//    console.log(toyota);
    // maruti.drive();
  
     // Object
 
-    let h={name:"shubham"}
+    // let h={name:"shubham"}
    // console.log(h.toString());
 
+   // 2- Using Object Literal Syntax
+   let obj={key1:"value1",key2:"value2"}; // Object literal syntax
+//    console.log(obj);
+
+
+   // 3- Using Object Constructor
+   const obj1=new Object();
+   obj1.name="shubham"
+   obj1.walk=function(){
+    console.log("Walking");
+   }
+//    console.log(obj1);
+
+   // 4- Using Object.create method
+    let v={name:"shubham"}
+    //let w={name:"Ravi"}
+   let c=Object.create(v); // c here inherits two object the v object and the god Object
+   c.name="Ravi";
+   let z=Object.create(c);
+//    console.log(z);
+
+
+   // 5- classes 
+// Class is a blue print for creating  objects
+//    class Human{
+//     constructor(name,age){
+//         this.name=name;
+//         this.age=age;
+
+//     }
+//     sleep(){
+//         console.log("sleep");
+//     }
+
+//    }
+//    Human.prototype.walk=()=>{
+//     console.log("I am walking");
+//    }
+//    const human1=new Human("ravi",23);
+//    console.log(human1)
+
+// class with inheritance
+
+// class Animal{
+
+// }
+
+// class Human extends Animal{
+//     constructor(name){
+//         super(); // super will call the parent class constructor as the child object cannot exist
+//         // unless the parent object exists in the memory
+//         this.name=name;
+//         console.log("first called")
+
+//     }
+
+ 
+// }
+// const h1=new Human("ravi");
+// h1.age=90
+// console.log(h1);
+
+
+// Task manager task
+
+// Task MAnager App using 
+
+class Task {
+  constructor(title, description) {
+    this.title = title
+    this.description = description;
+    this.status = "pending";
+
+  }
+
+  complete() {
+    this.status = "completed";
+  }
+
+}
+
+class TaskManager {
+  constructor() {
+    this.tasks = [];
+  }
+
+  addTask(task) {
+    this.tasks.push(task);
+
+  }
+  removeTasks(title) {
+
+    // remove the task
+
+    // filter the task
+    let tk = this.tasks
+    for (let i = 0; i < tk.length; i++) {
+      if (tk[i].title == title) {
+        // we will remove the item from the array
+        this.tasks.splice(i, 1);
+      }
+    }
+
+  }
+
+  listTasks() {
+    return this.tasks;
+  }
+
+}
+
+
+// We will create objects
+
+let task1 = new Task("Buy groceries", "Sugar,Milk,Coffee");
+let task2 = new Task("Clean House", "Bedroom ,living room,kitchen");
+
+let taskmanager = new TaskManager();
+taskmanager.addTask(task1);
+taskmanager.addTask(task2);
+
+// //console.log(taskmanager.listTasks());
+// taskmanager.removeTasks("Buy groceries");
+// console.log(taskmanager.listTasks());
+
+// 6 -Using Object assign method to create new Object
+
+let obj11={"key":"value"};
+let obj21=Object.assign({},obj11); // this is kind of does shallow copy of object
+console.log(obj21); // Object();
+   //Object
+
+  // prototype chaining  
+
+  /**
+   * 
+   * 
+   * Object.prototype.land="all land";
+
+const grandfather={
+ land:"1 acre land"
+}
+
+const father= Object.create(grandfather);
+father.car="1 volkswagon";
+father.land="2 acrs land";
+
+
+const son=Object.create(father);
+son.land="8 acres land";  // direct property of the object
+
+
+console.log(son.land);
+// Terms for use
+Object  ---> (god object  ,every object that you create will take it as reference to create object);
+Object()-->Object constructor ( it is used to create new Object())
+
+protitype --->this property exists in all constructors and class
+and is used to add new property to all the objects that gets create from the constructor class
+   
+
+// can a child object modifty the parent property
+// yeah you can use __proto__ to modify the parent property
+
+son.__proto__.land="2 acrs modify  land";
+
+console.log(father);
+
+* /
     </script>
 </body>
 </html>
