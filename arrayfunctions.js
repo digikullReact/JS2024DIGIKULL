@@ -212,4 +212,330 @@ let je=st.map(function(ele,index){
   return ele.toLocaleUpperCase();
 })
 
+
+// // Filter method
+const arr=[1,2,3,4,5,6];
+// filter is used to filter out the array elements based on some logic
+// it doesnt modify the original array
+const filter=arr.filter(function(ele,index){
+   if (ele%2==0){
+     return ele;
+   }
+
+ })
+// console.log(arr);
+
+console.log(filter);
+
+// const str=["apple","banana","animal","zoo","anime"];
+
+// const fil=str.filter(function(ele,index){
+//   if (ele.startsWith("a")){
+//     return ele;
+//   }
+
+
+// })
+// console.log(fil);
+
+
+
+// class Book {
+//   constructor(name, author, ISBN) {
+//     this.name = name;
+//     this.author = author;
+//     this.ISBN = ISBN;
+//   }
+// }
+
+// class Library {
+//   constructor() {
+//     this.books = [];
+//   }
+//   addBook(book) {
+//     this.books.push(book);
+//   }
+
+//   removeBook(ISBN) {
+//     let bk = this.books;
+//     // for (let i = 0; i < bk.length; i++) {
+//     //     if (bk[i].ISBN == ISBN) {
+//     //         this.books.slice(i, 1);
+//     //     }
+//     // }
+//     console.log("Before Filtered--", this.books)
+//     const filteredBook = this.books.filter((ele, index) => ele.ISBN != ISBN)
+//     // if (ele.ISBN!=ISBN){
+//     //   return ele;
+//     // }
+
+
+
+
+
+//     this.books = filteredBook;
+//     //console.log("Filtered--",filteredBook)
+//   }
+
+//   booklist() {
+//     return this.books;
+//   }
+// }
+
+// const book1 = new Book("Ramayan", "Valmiki", "100012");
+// const book2 = new Book("Geeta", "Prabhupad", "1003412");
+
+// const library = new Library();
+// library.addBook(book1);
+// library.addBook(book2);
+
+// library.removeBook("100012");
+// console.log("current library", library.booklist());
+
+
+let users=[
+    {
+      "id": 186353,
+      "name": "Horton Barlow",
+      "email": "hortonbarlow@intradisk.com",
+      "rating": 17,
+      "suggestion": 309070
+    },
+    {
+      "id": 805339,
+      "name": "Leach Jacobson",
+      "email": "leachjacobson@intradisk.com",
+      "rating": 58,
+      "suggestion": 436303
+    },
+    {
+      "id": 170135,
+      "name": "Witt Stanley",
+      "email": "wittstanley@intradisk.com",
+      "rating": 55,
+      "suggestion": 129088
+    },
+    {
+      "id": 742367,
+      "name": "Keri Mcfadden",
+      "email": "kerimcfadden@intradisk.com",
+      "rating": 14,
+      "suggestion": 127737
+    },
+    {
+      "id": 697505,
+      "name": "Bishop Valencia",
+      "email": "bishopvalencia@intradisk.com",
+      "rating": 34,
+      "suggestion": 228983
+    },
+    {
+      "id": 851265,
+      "name": "Shanna Morgan",
+      "email": "shannamorgan@intradisk.com",
+      "rating": 23,
+      "suggestion": 569199
+    },
+    {
+      "id": 90395,
+      "name": "Pittman Finch",
+      "email": "pittmanfinch@intradisk.com",
+      "rating": 38,
+      "suggestion": 204951
+    },
+    {
+      "id": 732619,
+      "name": "Anne Sykes",
+      "email": "annesykes@intradisk.com",
+      "rating": 70,
+      "suggestion": 83613
+    },
+    {
+      "id": 240694,
+      "name": "Nielsen Berger",
+      "email": "nielsenberger@intradisk.com",
+      "rating": 25,
+      "suggestion": 511252
+    },
+    {
+      "id": 486565,
+      "name": "Teresa Downs",
+      "email": "teresadowns@intradisk.com",
+      "rating": 27,
+      "suggestion": 621064
+    },
+    {
+      "id": 39811,
+      "name": "Melissa Cervantes",
+      "email": "melissacervantes@intradisk.com",
+      "rating": 62,
+      "suggestion": 948782
+    }
+  ]
+
+
+// First operations - Create an array of objects that have all the name as uppercase
+
+// second - Create an array of email  // mapoperation
+// third - create an array that has alle the users with rating greater than 30
+
+
+// First operations - Create an array of objects that have all the name as uppercase
+// function upperCase(users){
+//   return users.map((user)=>user.name.toUpperCase())
+// }
+
+// console.log(upperCase(users))
+
+// console.log(
+
+// users.map(function(ele,index){
+//   let temp=ele.name.toLocaleUpperCase();
+//   ele.name=temp;
+//   return ele;
+  
+// })
+  
+// )
+// let emails=users.map(function(ele,index){
+
+//   return ele.email;
+
+// })
+
+
+// console.log(
+//   users.filter(ele=>{
+//     return ele.rating >30
+//   })
+// )
+
+// -->reduce method // to accumulate 
+
+// reduce can return any kind of data ,array ,number ,object ,string
+// depending on the second argument
+// because the second arg is the default value of accumulator
+
+let num=[1,2,3,3,4,5];
+// let sum=0;
+// for(let i=0;i<arr.length;i++){
+//   sum=sum+arr[i];
+// }
+// console.log(sum);
+
+// console.log(
+
+//   num.reduce(function(acc,ele){
+//     acc=acc+ele;
+
+//     return acc;
+    
+//   },0)
+
+  
+// )
+
+// let acc=[];
+
+// for (let i=0;i<num.length;i++){
+//   acc.push(num[i]*2);
+// }
+// console.log(acc);
+// console.log(
+
+//   num.reduce(function(acc,ele){
+//     acc.push(ele*2);
+
+//     return acc;
+
+//   },[])
+
+
+// )
+
+// let str=["a","b","c","d"]
+
+// console.log(
+
+//   str.reduce((acc,ele)=>{
+//     acc=acc+ele;
+//     return acc;
+    
+//   },"")
+// )
+
+// Try this operation using reduce
+
+// First operations - Create an array of objects that have all the name as uppercase
+
+// second - Create an array of email  // mapoperation
+// third - create an array that has alle the users with rating greater than 30
+
+let d=users.reduce((acc,ele)=>{
+  let name=(ele.name).toLocaleUpperCase();
+  ele.name=name;
+   acc.push(ele)
+  return acc;
+},[])
+
+console.log(
+  users.reduce((acc,ele)=>{
+   
+     acc.push(ele.email)
+    return acc;
+  },[])
+
+)
+
+console.log(
+  users.reduce((acc,ele)=>{
+    if(ele.rating>30){
+       acc.push(ele)
+    }
+    
+    return acc;
+  },[])
+
+)
+
+// array find operation returns always the first element ,which satisfies the condition
+// 
+let arr=[1,2,32,3,4];
+
+console.log(
+
+  arr.find(function(ele,index){
+    return (ele%2==0)
+  })
+)
+
+
+
+// sort method  // it modifies the original array as well
+// by default it sort elements as strings
+
+// let d=[7,1,16,89,11,34];
+// //console.log();
+// console.log(
+
+//   // the callback passed here is a comaprison function
+
+//   // negative value   a-b = - ; a is lesser than b
+//   // positive value // a is greater than b
+//   // zero value // a and b are equal
+  
+//  d.sort(function(a,b){
+//    return a-b
+   
+//  })
+
+  
+// );
+
+// console.log(d);
+
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);
+
 console.log(je);
