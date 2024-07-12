@@ -533,7 +533,7 @@ console.log(
 // );
 
 // console.log(d);
-
+////  it checks the ascii value of first character /letter
 const months = ['March', 'Jan', 'Feb', 'Dec'];
 months.sort();
 console.log(months);
